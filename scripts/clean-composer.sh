@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -e
+
+script_path=$(dirname $0)
+working_dir=$(pwd)
+cd "$script_path"
+cd ../..
+repo_root=$(pwd)
+
+source "$repo_root/.build.env"
+
+rm -rf vendor bin
