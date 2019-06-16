@@ -12,4 +12,11 @@ source "$repo_root/.build.env"
 
 set -e
 
-echo 'No Behat tests implemented yet.'
+# Run unit tests.
+if [ "$drupal_version" == "8" ]; then
+  ./vendor/bin/phpunit
+
+elif [ "$drupal_version" == "7" ]; then
+  echo 'No unit tests implemented yet.'
+
+fi
